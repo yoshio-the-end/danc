@@ -1,7 +1,51 @@
-<div id="fullPage">
-<section class="section">page01</section>
-<section class="section">page02</section>
-<section class="section">page03</section>
-<section class="section">page04</section>
-<section class="section">page05</section>
-</div>
+<div id="container">
+ 
+  <section id="stage1" class="stageBase">
+      <div class="bg">
+      <div class="fieldWrap">
+      <%= render partial: 'header' %>
+
+      <%= render partial: 'slide' %>
+
+      <%= render partial: 'arrow' %>
+
+    </div><!--/.fieldWrap -->
+  </section>
+  
+  <section id="stage2" class="stageBase">
+    <div class="fieldWrap">
+
+      <%= render partial: 'header' %>
+      <div class="what-flex">
+        <div class="what-upper">
+          <h2 class="what-upper__title">
+          #What's danc ??
+          </h2>
+          <p class="what-upper__text">
+          <span>danc</span>とは、<span>d</span>eploy,<span>a</span>ll,<span>n</span>ew,<span>c</span>reate.
+          の略で、全ての創造（クリエイト）を発信しよう！という意味です。</p>
+          <p class="what-upper__text">せっかく生み出した創造でも、誰も知らなかったらもったいないですよね！？</p>
+          <p class="what-upper__text">dancはそんなクリエイターの為の情報発信サイトです。webサービス、イラスト、写真、ハンドメイドなど<span>何か作ったらdancへ投稿</span>して全世界に発信しましょう！</p>
+        </div>
+        <div class="what-under">
+          <div class="what-under__left">
+          </div>
+          <div class="what-under__right">
+          </div>
+        </div>
+      </div>
+
+      <%= render partial: 'arrow' %>
+
+    </div><!--/.fieldWrap -->
+  </section>
+
+    <section id="stage3" class="stageBase">
+    <div class="fieldWrap">
+
+      <%= render partial: 'header' %>
+
+    </div><!--/.fieldWrap -->
+  </section>
+
+</div><!--/#container-->

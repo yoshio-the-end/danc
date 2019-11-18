@@ -25,6 +25,7 @@ time, mark, audio, video {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    font-family: 'Fredoka One', cursive;
 }
 
 body {
@@ -99,4 +100,9 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

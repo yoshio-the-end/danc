@@ -1,0 +1,39 @@
+.what-flex{
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  .what-upper{
+    background-color: #fff;
+    height: calc(50vh - 30px);
+    box-shadow: #707070 5px 5px;
+    padding: 15px;
+    &__title{
+      font-size: 5rem;
+    }
+    &__text{
+      font-size: 1.4rem;
+      span{
+        font-size: 1.8rem;
+        color: red;
+      }
+    }
+  }
+  .what-under{
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    &__left{
+      width: 50%;
+      background-color: #fff;
+      margin: 1% 0;
+      box-shadow: #707070 5px 5px;
+    }
+    &__right{
+      width: 49%;
+      background-color: #fff;
+      margin: 1% 0;
+      box-shadow: #707070 5px 5px;
+    }
+  }
+}

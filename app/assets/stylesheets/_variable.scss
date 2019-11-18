@@ -1,0 +1,100 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 20rem;
+}
+
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size:1.6rem;/* 16px*/
+  line-height: 2;
+}
+h1 {
+  font-size: 36px;/* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2.4rem + ((1vw - 0.64rem) * 2.1429));/* 24px~36pxで可変*/
+  line-height: 1.3;
+}
+h2 {
+  font-size: 24px;/* IE8以下とAndroid4.3以下用フォールバック */
+  font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+  line-height: 1.3;
+}
+@media (min-width: 1200px) {/* 1200px以上*/
+  h1 {
+      font-size: 3.6rem;/* 36px*/
+  }
+  h2 {
+      font-size: 2.4rem;/* 24px*/
+  }
+}
+@media screen and (max-width: 640px) {/* 640px以下*/
+  body{
+  line-height: 2;
+  }
+  h1{
+      font-size: 2.4rem;/* 24px*/
+  }
+  h2 {
+      font-size: 2rem;/* 20px*/
+  }
+}
+
+.arrowWrap {
+  position: absolute;
+  right: -25px;
+  bottom: 0;
+  height: 200px
+}
+
+.arrowInner p {
+  color: black;
+  font-size: 12px;
+  text-align: end;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.arrow {
+  width: 1px;
+  height: 100px;
+  margin: 50px auto 0;
+  background-color: #fafafa;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow::before {
+  content: '';
+  width: 2px;
+  height: 100px;
+  margin: 50px auto 0;
+  background-color: black;
+  position: fixed;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  -webkit-animation: arrow 2s ease 0s infinite normal;
+  animation: arrow 2s ease 0s infinite normal;
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  60% {
+    -webkit-transform: translate3d(-50%, 100px, 0);
+    transform: translate3d(-50%, 100px, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50%, 100px, 0);
+    transform: translate3d(-50%, 100px, 0);
+  }
+}
