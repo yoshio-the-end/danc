@@ -1,0 +1,124 @@
+.what-flex{
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  .whatUpper{
+    background-color: #fff;
+    height: calc(55vh - 30px);
+    box-shadow: #707070 5px 5px;
+    padding: 15px;
+    &__title{
+      font-size: 4rem;
+    }
+    &__text{
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      span{
+        font-size: 2rem;
+        font-weight: bold;
+        color: red;
+      }
+    }
+    &__info{
+      width: 100%;
+      height: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__arrow{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        p{
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        i{
+          font-size: 3rem;
+          color: red;
+        }
+      }
+      &__panel{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        border: 1px solid black;
+        width: 25%;
+        padding: 1rem;
+        margin: 1rem;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 60%;
+          height: 60%;
+        }
+      }
+    }
+  }
+
+  .what-under{
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    &__content{
+      margin:  0;
+      &__left{
+        width: 50%;
+      }
+      &__right{
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__left{
+      width: 46%;
+      background-color: #fff;
+      margin: 1% 0;
+      box-shadow: #707070 5px 5px;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__right{
+      width: 46%;
+      background-color: #fff;
+      margin: 1% 0;
+      box-shadow: #707070 5px 5px;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__text{
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+.btn-push {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0 20px;
+  width: 230px;
+  text-align: center;
+  background-color: rgb(221, 0, 0);
+  font-size: 5rem;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 3px;
+  border-bottom: 3px solid rgb(136, 1, 1);
+  img{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.btn-push:active {
+    transform: translateY(3px);
+    border-bottom: none;
+}
