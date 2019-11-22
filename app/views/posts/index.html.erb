@@ -1,2 +1,36 @@
-<div class="wrapper">
+<div class="index_wrapper">
+<div class="t_nav">
+
+  <div class="left_box">
+    <a href="/" class="logo"><img class="shake" src="danclogo_black.png"></a>
+  </div>
+
+  <div class="right_box">
+    <% if user_signed_in? %>
+      <%= link_to "let's danc", new_post_path, class: "t_nav_text shake" %>
+      <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "t_nav_text shake" %>
+    <% else %>
+      <%= link_to "sign in", new_user_session_path, class: "t_nav_text shake modal_open" %>
+      <%= link_to "sign up", new_user_registration_path, class: "t_nav_text shake modal_open" %>
+    <% end %>
+  </div>
+
+</div>
+  <div class="index">
+    <div class="index__upper">
+      <div class="index__upper__title">
+      Find danc
+      </div>
+      <div class="index__upper__contents">
+        <div class="index__upper__contents__text">
+        danc一覧から検索する : 
+        </div>
+        <div class="index__upper__contents__search">
+        <input type="search" class="search__box">
+        </div>
+      </div>
+    </div>
+    <div class="index__main">
+    </div>
+  </div>
 </div>

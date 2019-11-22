@@ -1,29 +1,37 @@
-.logo img {
-  width: 60px;
-  height: 60px;
+.index_wrapper {
+  width:100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #eee;
 }
 
-.bg {
-  height: 0;
-  /* 表示画像の高さ ÷ 表示画像の幅 × 100 */
-  padding-bottom: 37.5%;
-  background: url('/top_img.png') 0 0 no-repeat;
-  background-size: contain;
-  animation-duration: 1s;
-  animation-name: slider;
-}
-
-.top_text{
-  position: relative;
-  top: calc(100vh - 300px);
-}
-
-.multiple-item{
-  position: relative;
-  top: 625px;
-  img {
-    height: 260px;
+.index {
+  width: 74%;
+  margin: 0 auto;
+  &__upper{
     width: 100%;
-    cursor: pointer;
+    background-color: #fff;
+    box-shadow: #707070 5px 5px;
+    padding: 1%;
+    text-align: center;
+    &__title{
+      font-size: 4rem;
+    }
+    &__contents{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      text-align: center;
+      align-items: center;
+    }
   }
+}
+
+.search__box{
+  font-size: 1.5rem;
+  margin-left: 5%;
+  border: 1px solid black;
+  width: 300px;
+  height: 30px;
+  padding: 0 2%;
 }
