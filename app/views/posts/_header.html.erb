@@ -5,8 +5,13 @@
   </div>
 
   <div class="right_box">
-    <a href="#" class="t_nav_text shake">sign up</a>
-    <a href="#" class="t_nav_text shake">sign in</a>
+    <% if user_signed_in? %>
+      <%= link_to "let's danc", new_post_path, class: "t_nav_text shake" %>
+      <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "t_nav_text shake" %>
+    <% else %>
+      <%= link_to "sign in", new_user_session_path, class: "t_nav_text shake modal_open" %>
+      <%= link_to "sign up", new_user_registration_path, class: "t_nav_text shake modal_open" %>
+    <% end %>
   </div>
 
 </div>
