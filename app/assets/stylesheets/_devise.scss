@@ -1,0 +1,83 @@
+.wrapper {
+  width:100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: gray;
+}
+
+.sign_box {
+  background-color: #fff;
+  padding: 30px 3%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 74%;
+}
+
+
+.actions{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 3%;
+}
+
+.new_user{
+  width: 100%;
+  margin: 2% 0;  
+}
+
+.sign_left{
+  img{
+    height: 75%;
+    width: 75%;
+    cursor: default;
+  }
+}
+
+
+.sign_right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  img{
+    height: 100px;
+    width: 100px;
+    cursor: default;
+  }
+  h2{
+    margin-top: 1%;
+    font-size: 30px;
+  }
+  .field {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .text{
+      align-items: center;
+      padding: 5px 5px;
+      width: calc(45% - 10px);
+    }
+    &__btn{
+      width: 45%;
+      font-size: 1.5rem;
+      font-style:normal;
+      color:#000000;
+      border:1px solid black;
+      cursor:pointer;
+        &:hover{
+        background-color: red;
+        color: white;
+        transition: 400ms;
+      }
+    }
+  }
+}
