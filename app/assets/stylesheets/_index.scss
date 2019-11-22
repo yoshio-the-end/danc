@@ -45,3 +45,47 @@
   height: 30px;
   padding: 0 2%;
 }
+
+.index__main{
+  display: flex;
+  flex-direction: column;
+  &__contents{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: #707070 5px 5px;
+    padding: 1%;
+    margin: 2% 0;
+    a{
+      width: 42%;
+    }
+    .site_image{
+      width:100%;
+      height: 300px;
+    }
+    &__text{
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      margin: 0 auto 0 0;
+      padding-left: 3%;
+      overflow: auto;
+      &__title{
+        font-size: 2rem;
+        border-bottom: 1px solid black;
+      }
+      &__description{
+        font-size: 1.2rem;
+      }
+    }
+    &__user{
+      width: 10%;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      text-align: end;
+    }
+  
+  }
+}
