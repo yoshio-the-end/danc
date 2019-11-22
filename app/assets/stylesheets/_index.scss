@@ -23,6 +23,16 @@
       margin: 0 auto;
       text-align: center;
       align-items: center;
+      &__text{
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      img{
+        margin-left: 2%;
+        width: 5%;
+        height: 5%;
+        cursor: default;
+      }
     }
   }
 }
