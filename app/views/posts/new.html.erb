@@ -1,0 +1,46 @@
+<div class="index_wrapper">
+  <div class="t_nav">
+    <div class="left_box">
+      <a href="/" class="logo"><img class="shake" src="/danclogo_black.png"></a>
+    </div>
+    <div class="right_box">
+      <% if user_signed_in? %>
+        <%= link_to "let's danc", new_post_path, class: "t_nav_text shake" %>
+        <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "t_nav_text shake" %>
+      <% else %>
+        <%= link_to "sign in", new_user_session_path, class: "t_nav_text shake modal_open" %>
+        <%= link_to "sign up", new_user_registration_path, class: "t_nav_text shake modal_open" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="sign_box">
+    <div class="sign_left">
+      <h2>新規投稿</h2>
+     <img src="/danc.png">
+   </div>
+    <div class="sign_right">
+       <%= form_with model: @post, local:true do |f| %>
+
+       <div class="field">
+        <%= f.label :"title" %>
+        <%= f.text_field :title, class: "text", autofocus: true, autocomplete: "name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :url %>
+        <%= f.text_field :address, class: "text" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :"discription" %>
+        <%= f.text_area :content, class: "text", autocomplete: "url" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "登録", class: "field__btn" %>
+        <%= link_to "トップへ戻る", root_path ,class: "field__btn"%>
+      </div>
+    <% end %>
+    </div>
+  </div>
