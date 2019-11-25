@@ -36,7 +36,7 @@
       <div class="index__main__contents">
         <img src="<%= post.image %>">
         <div class="index__main__contents__text">
-          <%= link_to post.title, post.address %>
+          <%= link_to post.title, post.address, class: "index__main__contents__text__title" %>
           <div class="index__main__contents__text__description">
           <%= safe_join(post.content.split("\n"), tag(:br)) %>
           </div>

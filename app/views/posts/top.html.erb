@@ -5,7 +5,12 @@
       <div class="fieldWrap">
       <%= render partial: 'header' %>
 
-      <%= render partial: 'slide' %>
+      <div class="multiple-item">
+      <% @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(6)%>
+        <% @posts.each do |post| %>
+          <div><a href="<%= post.address %>"><img src="<%= post.image %>"></a></div>
+        <% end %>
+      </div>
 
       <%= render partial: 'arrow' %>
 

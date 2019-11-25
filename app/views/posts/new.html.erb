@@ -16,7 +16,7 @@
 
   <div class="sign_box">
     <div class="sign_left">
-      <h2>新規投稿</h2>
+      <h2>Let's danc</h2>
      <img src="/danc.png">
    </div>
     <div class="sign_right">
@@ -24,7 +24,7 @@
 
        <div class="field">
         <%= f.label :"image" %>
-        <%= f.file_field :image %>
+        <%= f.file_field :image,class: "img_box" %>
       </div>
 
        <div class="field">
@@ -43,7 +43,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "登録", class: "field__btn" %>
+        <%= f.submit "Let's danc!!", class: "field__btn" %>
         <%= link_to "トップへ戻る", root_path ,class: "field__btn"%>
       </div>
     <% end %>
