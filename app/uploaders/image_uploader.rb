@@ -47,5 +47,5 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
 
-  process resize_to_fit: [600, 300]
+  process resize_to_fit: [450, 450]
 end

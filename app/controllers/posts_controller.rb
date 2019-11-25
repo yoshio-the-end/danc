@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_signin, except: [:index, :top]
   def index
-    @posts = Post.includes(:user)
+    @posts = Post.includes(:user).order("created_at DESC")
   end
 
   def new

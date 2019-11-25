@@ -32,25 +32,25 @@
       </div>
     </div>
     <div class="index__main">
+    <% @posts.each do |post| %>
       <div class="index__main__contents">
-        <a href="https://www.google.com/"><img src="/google.png" class="site_image"></a>
+        <img src="<%= post.image %>">
         <div class="index__main__contents__text">
-          <a href="https://www.google.com/" class="index__main__contents__text__title">
-          Google
-          </a>
+          <%= link_to post.title, post.address %>
           <div class="index__main__contents__text__description">
-          世界最大の検索エンジンです。
+          <%= post.content %>
           </div>
         </div>
         <div class="index__main__contents__user">
           <div class="index__main__contents__user__name">
-          テストくん
+          <%= post.user.name %>
           </div>
           <div class="index__main__contents__user__date">
-          2019/11/01
+          <%= post.created_at.strftime("%Y年%m月%d日") %>
           </div>
         </div>
       </div>
+      <% end %>
     <%= render partial: 'arrow' %>
     </div>
   </div>

@@ -3,8 +3,8 @@
   height: 100vh;
   margin: 0 auto;
   background-color: #eee;
+  overflow: auto;
 }
-
 .index {
   width: 74%;
   margin: 0 auto;
@@ -56,26 +56,26 @@
     background-color: #fff;
     box-shadow: #707070 5px 5px;
     padding: 1%;
-    margin: 2% 0;
+    margin: 1% 0;
     a{
       width: 42%;
-    }
-    .site_image{
-      width:100%;
-      height: 300px;
     }
     &__text{
       display: flex;
       flex-direction: column;
       width: 45%;
-      margin: 0 auto 0 0;
+      margin: 0 0 0 auto;
       padding-left: 3%;
       overflow: auto;
+      font-family: sans-serif;
       &__title{
         font-size: 2rem;
         border-bottom: 1px solid black;
-      }
+        font-family: sans-serif;
+        font-weight: bold;
+        }
       &__description{
+        font-family: sans-serif;
         font-size: 1.2rem;
       }
     }
@@ -85,6 +85,14 @@
       justify-content: flex-end;
       flex-direction: column;
       text-align: end;
+      font-family: sans-serif;
+      &__name{
+        font-family: sans-serif;
+      }
+      &__date{
+        font-size: 1.2rem;
+        font-family: sans-serif;
+      }
     }
   
   }
