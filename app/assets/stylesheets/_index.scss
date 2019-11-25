@@ -56,9 +56,14 @@
     background-color: #fff;
     box-shadow: #707070 5px 5px;
     padding: 1%;
-    margin: 1% 0;
+    margin: 1% 0 0 0;
     a{
-      width: 42%;
+      width: 100%;
+      border-bottom: 1px solid black;
+    }
+    a:hover{
+      color: red;
+      transition: 300ms;
     }
     &__text{
       display: flex;

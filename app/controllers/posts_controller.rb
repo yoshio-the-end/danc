@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_signin, except: [:index, :top]
   def index
-    @posts = Post.includes(:user).order("created_at DESC")
+    @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(6)
   end
 
   def new
