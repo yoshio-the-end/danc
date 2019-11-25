@@ -20,21 +20,26 @@
      <img src="/danc.png">
    </div>
     <div class="sign_right">
-       <%= form_with model: @post, local:true do |f| %>
+       <%= form_with model: @post,class: "create", local:true do |f| %>
+
+       <div class="field">
+        <%= f.label :"image" %>
+        <%= f.file_field :image %>
+      </div>
 
        <div class="field">
         <%= f.label :"title" %>
-        <%= f.text_field :title, class: "text", autofocus: true, autocomplete: "name" %>
+        <%= f.text_field :title, class: "text_box", autofocus: true, autocomplete: "name" %>
       </div>
 
       <div class="field">
         <%= f.label :url %>
-        <%= f.text_field :address, class: "text" %>
+        <%= f.text_field :address, class: "text_box" %>
       </div>
 
       <div class="field">
         <%= f.label :"discription" %>
-        <%= f.text_area :content, class: "text", autocomplete: "url" %>
+        <%= f.text_area :content, class: "text_box_area", autocomplete: "url" %>
       </div>
 
       <div class="actions">

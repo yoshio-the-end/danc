@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :move_to_signin, except: [:index, :top]
   def index
     @posts = Post.includes(:user)
   end
@@ -14,7 +15,11 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :text, :category_id).merge(user_id: current_user.id)
+    params.require(:post).permit(:title, :address, :content, :image).merge(user_id: current_user.id)
+  end
+
+  def move_to_signin
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
 end
