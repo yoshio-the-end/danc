@@ -4,6 +4,10 @@
   margin: 0 auto;
   background-color: #eee;
   overflow: auto;
+  a:hover{
+    color: red;
+    transition: 300ms;
+  }
 }
 .index {
   width: 74%;
@@ -101,5 +105,12 @@
       }
     }
   
+  }
+}
+
+.pagination{
+  font-size: 2rem;
+  .page{
+    margin-right: 1%;
   }
 }
