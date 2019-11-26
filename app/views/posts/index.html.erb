@@ -26,7 +26,7 @@
         danc一覧から検索する : 
         </div>
         <div class="index__upper__contents__search">
-        <input type="search" id="search" class="search__box" placeholder="検索ワードを入力してください">
+        <input type="form" id="search_box" class="search__box" placeholder="検索ワードを入力してください">
         </div>
         <img src="/finddanc.png">
       </div>
@@ -38,7 +38,7 @@
         <div class="index__main__contents__text">
           <%= link_to post.title, post.address, class: "index__main__contents__text__title" %>
           <div class="index__main__contents__text__description">
-          <%= safe_join(post.content.split("\n"), tag(:br)) %>
+          <p><%= post.content %></p>
           </div>
         </div>
         <div class="index__main__contents__user">

@@ -14,6 +14,14 @@ class PostsController < ApplicationController
     redirect_to action: :index
   end
 
+  def search
+    @posts = Post.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :address, :content, :image).merge(user_id: current_user.id)
