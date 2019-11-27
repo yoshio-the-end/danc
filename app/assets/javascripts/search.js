@@ -22,6 +22,11 @@ $(function() {
   search_list.append(html);
   }
 
+  function appendErrMsgToHTML(msg) {
+    var html = `<div class='name'>${ msg }</div>`
+    search_list.append(html);
+  }
+
   $("#search_box").on("keyup", function() {
     var input = $("#search_box").val();
     $.ajax({
@@ -41,5 +46,9 @@ $(function() {
         appendErrMsgToHTML("一致するdancがありません");
       }
     })
+
+    .fail(function() {
+      alert('error');
+    });
   });
 });
