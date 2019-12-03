@@ -79,7 +79,7 @@
       box-shadow: #707070 5px 5px;
       padding: 0 15px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
     }
     &__right{
@@ -89,7 +89,7 @@
       box-shadow: #707070 5px 5px;
       padding: 0 15px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
     }
     &__text{
@@ -102,14 +102,15 @@
 .btn-push {
   display: inline-block;
   margin: 10px 0;
-  width: 230px;
+  height: 80%;
+  width: 100%;
   text-align: center;
   background-color: rgb(221, 0, 0);
   font-size: 5rem;
   color: #FFF;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 24px;
+  padding: 10px;
   border-radius: 5px;
   border-bottom: 5px solid rgb(136, 1, 1);
   img{
